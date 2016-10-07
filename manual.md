@@ -45,7 +45,7 @@ Este manual describe la utilización del sistema de turnos en su versión MVP.  
   * [8. Prestaciones](#prestaciones)
     * [8.1 Listado de prestaciones](#prestaciones)
     * [8.2 Alta de prestaciones](#altaPrestaciones)
-    * [8.3 Modificar o eliminar una prestación](#modificarEliminarEspecialidad)
+    * [8.3 Modificar o eliminar una prestación](#modificarEliminarPrestacion)
 <br>
 
 <br>
@@ -101,7 +101,7 @@ Hay tres pasos que deben seguirse para poder dar un turno:
 #### Paso 1: Ingresar los datos del paciente
 
 
-
+<a id="turnoPacienteNuevo" />
 **a.	Paciente nuevo**
 
 Si se quiere dar un turno a un paciente que no existe en el sistema se debe ingresar obligatoriamente el nombre, apellido y número de teléfono.
@@ -247,7 +247,7 @@ a. Por ingreso de **nueva ausencia**
 
 Cuando el usuario ingresa una nueva ausencia del profesional, se cancelan los turnos tomados de este profesional para los días de la ausencia. Por ejemplo, si ya hay turnos tomados para el 1/10 para un profesional, y se le carga una ausencia para el 1/10, éstos serán cancelados automáticamente y se deberá **informar al paciente** lo ocurrido.
 
-
+<a id="turnosAInformarModificacionAgenda" />
 b. Por **modificación en la agenda** de un profesional
 
 Cuando se modifica los días u horarios de atención de un profesional, los turnos tomados serán cancelados por el sistema. Por ejemplo, si hay un turno tomado para el miércoles 1/10 a las 10am; y se modifica la agenda de forma tal que el profesional deja de atender los miércoles 10am, este turno tomado pasa a cancelado automáticamente y se deberá **informar al paciente** de lo ocurrido.
@@ -305,17 +305,55 @@ En el calendario, se podrá distinguir el turno marcado como presente ya que est
 
 ![](images/calendarioTurnoPresente.png)
 
+<br>
+<br>
+<br>
+
 <a id="pacientes"></a>
+<a id="listadoPacientes" />
 ## 4. Pacientes
 
-<a id="listadoPacientes" />
+<br>
+Para ver los pacientes se debe ingresar en la opción de menú Pacientes
+
+
 ### 4.1 Listado de pacientes
+
+Allí se mostrará el listado de pacientes, y se podrá:
+
+- buscar un paciente por nombre
+- filtrar listado por pacientes activos/inactivos
+- crear nuevo paciente
+-	modificar o eliminar paciente
+
+Al hacer click en cada paciente del listado se verá mas información y el botón Detalle/Modificar
+
+
+![](images/listadoPacientes.png)
+
+Los pacientes que están pintados de azul, son pacientes que fueron dados de alta por el sistema cuando se dio un nuevo turno a un paciente que no existia previamente, [tal como se explica aquí](#turnoPacienteNuevo). Los datos de estos pacientes deben ser completados.
+
+
 
 <a id="altaPaciente" />
 ### 4.2 Alta de paciente
 
+Para dar de alta un paciente se debe hacer click en Nuevo Paciente del listado e ingresar los datos en el formulario.
+
+![](images/detallePaciente.png)
+
+<br>
 <a id="modificarEliminarPaciente" />
 ### 4.3 Modificar o eliminar paciente
+
+Al hacer click en cada paciente del listado se verá mas información y el botón Detalle/Modificar, se puede ver el listado [aquí](#listadoPacientes)
+
+Luego de hacer click en Detalle/Modificar se va al mismo formulario que en el alta de paciente donde se puede:
+
+- modificar datos personales del paciente
+- ver turnos del paciente
+- cancelar un turno del paciente
+- eliminar el paciente
 
 <a id="agendas" />
 ## 5. Agendas
@@ -323,13 +361,14 @@ En el calendario, se podrá distinguir el turno marcado como presente ya que est
 Un profesional puede tener una o varias agendas. Cada agenda representa los turnos disponibles que tiene un profesional para una especialidad/prestación especificando los días y horarios de atención.
 
 
+![](images/listadoAgendas.png)
 
 <a id="altaAgenda" />
 ### 5.1 Alta de agenda
 
-Para abrir una nueva agenda de un profesional se debe elegir la opción Agendas -> Listado, y hacer click en el botón Nueva Agenda
+Para abrir una nueva agenda de un profesional se debe ir a Agendas -> Listado y clickear el botón Nueva Agenda
 
-![](images/listadoAgendas.png)
+![](images/nuevaAgenda1.png)
 
 <br>
 <br>
@@ -360,8 +399,12 @@ Luego se deberá hacer click en el botón Confirmar, y se verá la nueva agenda 
 ### 5.2 Modificar o eliminar agenda
 
 <br>
+Para modificar una agenda, se deberá ir al listado, seleccionar la agenda a modificar y clickear el botón modificar
+
+![](images/modificarAgenda.png)
 <br>
 <br>
+Únicamente se podrán modificar los días/horarios de atención del profesional. Hay que tener en cuenta que una vez modificada la agenda el sistema cancelará automáticamente los turnos que se vean afectados por el cambio. Esta situación deberá ser informada al paciente tal como se explica en [turnos a informar](#turnosAInformarModificacionAgenda)
 <a id="calendario" />
 ### 5.3 Calendario
 
@@ -393,21 +436,32 @@ Se debe ir a Admin -> Profesionales
 ### 6.1 Listado de profesionales
 
 Allí se mostrará el listado de profesionales, y se podrá:
-o	buscar un profesional por nombre
-o	filtrar listado por profesional activos/inactivos
-o	crear nuevo profesional
-o	modificar profesional
+- buscar un profesional por nombre
+- filtrar listado por profesional activos/inactivos
+- crear nuevo profesional
+- modificar o eliminar profesional
 
 Al hacer click en cada profesional del listado se verá mas información, junto con las opciones de Turnos, Asistencias y Detalle
 
 ![](images/listadoProfesionales.png)
 
+Al clickear el botón de Turnos, se pueden [ver los turnos del profesional](#turnosDeProfesional)
+
+Al clickear el botón de Ausencias, se puede [ver las ausencias de un profesional](#listadoAusencias) y [cargar nueva ausencia](#nuevaAusencia)
+
+Al clickear el botón de Detalle, se visualizan los datos personales del profesional, [se puede modificar sus datos, especialidad/prestación o eliminarlo](#modificarEliminarProfesional).
+
+El mismo formulario de detalle de profesional es utilizado por el alta, modificación o eliminación del profesional.
 
 <a id="altaProfesionales" />
 ### 6.2 Alta de profesional
 
+Para dar de alta un profesional, se deberá hacer click en Nuevo Profesional, del listado de profesionales y llenar los campos con los datos personales del profesional junto con la especialidad y prestaciones que atienda.
+
 <a id="modificarEliminarProfesional" />
 ### 6.3 Modificar o eliminar profesional
+
+Para modificar un profesional, se deberá seleccionar el profesional del listado y luego clickear el botón de Detalle para poder modificar datos del profesional, cambiar especialidad y/o prestación. También desde allí se puede Eliminar el profesional.
 
 <a id="turnosDeProfesional" />
 ### 6.4 Ver turnos de un profesional
@@ -549,4 +603,3 @@ En la pantalla nuevo turno, se puede ver el campo Notas, como Observaciones:
 <br>
 
 <a id="modificarEliminarEspecialidad" />
-### 8.3 Modificar o eliminar una prestación
