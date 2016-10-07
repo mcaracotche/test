@@ -317,20 +317,70 @@ En el calendario, se podrá distinguir el turno marcado como presente ya que est
 
 <a id="agendas" />
 ## 5. Agendas
+<br>
+Un profesional puede tener una o varias agendas. Cada agenda representa los turnos disponibles que tiene un profesional para una especialidad/prestación especificando los días y horarios de atención.
+
+
 
 <a id="altaAgenda" />
 ### 5.1 Alta de agenda
 
+Para abrir una nueva agenda de un profesional se debe elegir la opción Agendas -> Listado, y hacer click en el botón Nueva Agenda
+
+![](images/listadoAgendas.png)
+
+<br>
+<br>
+<br>
+Al clickear el botón Nueva Agenda, se mostrará la siguiente pantalla dónde se deberá elegir el profesional, especialidad y prestación de la agenda a abrir:
+
+![](images/nuevaAgenda.png)
+<br>
+<br>
+<br>
+
+Se deberá hacer click en el botón Cargar para poder elegir los horarios y días de atención para esta agenda.
+
+Por ejemplo:
+
+![](images/nuevaAgenda2.png)
+
+<br>
+<br>
+<br>
+La grilla horaria, indica que el profesional Brey, Gustavo atenderá Nutrición/Primera vez los días Lunes, de 8 a 13hs.
+
+Luego se deberá hacer click en el botón Confirmar, y se verá la nueva agenda en el listado.
+
+![](images/nuevaAgenda3.png)
+
 <a id="modificarEliminarAgenda" />
 ### 5.2 Modificar o eliminar agenda
 
+<br>
+<br>
+<br>
 <a id="calendario" />
 ### 5.3 Calendario
+
+<br>
+
+La vista Calendario se utiliza para poder ver los turnos de un profesional e imprimir su agenda. Primero se deben ingresar los filtros de nombre de profesional, especialidad y prestación y hacer click en el botón Buscar. Se deben ingresar los filtros para poder ver los turnos en el calendario, de lo contrario, no se mostrará ningún turno.
+
+
+![](images/agendaCalendario.png)
 
 <a id="imprimirAgenda" />
 ### 5.4 Imprimir agenda de un profesional
 
+<br>
+Para imprimir la agenda de un médico se deberá hacer click en el botón derecho y elegir la opción de Imprimir.
 
+![](images/imprimirAgenda.png)
+
+<br>
+<br>
+<br>
 <a id="profesionales" />
 ## 6. Profesionales
 
