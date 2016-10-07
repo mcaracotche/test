@@ -82,16 +82,18 @@ Para que se puedan dar turnos, se deben cargar previamente determinados datos en
 
  3. [Dar de alta los nuevos profesionales](#altaProfesionales)
 
- 4. [Abrir agendas de cada profesional, especialidad/prestación](#abrirAgenda)
+ 4. [Abrir agendas de cada profesional, especialidad/prestación](#altaAgenda)
 
 <br>
 
 <a id="turnos" />
+<a id="nuevoTurno" />
 ## 3. Turnos
 
 
-<a id="nuevoTurno" />
+
 ### 3.1 Dar un nuevo turno
+<br>
 
 Hay tres pasos que deben seguirse para poder dar un turno:
 
