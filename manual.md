@@ -9,7 +9,6 @@
 
 Este manual describe la utilización del sistema de turnos en su versión MVP.  El término MVP se refiere a la posibilidad de entregar un producto con los mínimos requerimientos pero funcional, de manera de ir testeando en vivo si lo primero que se desarrolló es lo que se buscaba y sobre una base testeada de trabajo, ir agregando funcionalidades que enriquezcan el producto.
 
-
 ## Tabla de contenidos
   * [1. Descripción de entidades del sistema](#entidades)
   * [2. Carga inicial de datos](#cargaInicial)
@@ -49,12 +48,11 @@ Este manual describe la utilización del sistema de turnos en su versión MVP.  
   * [9. Prestaciones](#prestaciones)
     * [9.1 Listado de prestaciones](#prestaciones)
     * [9.2 Alta de prestaciones](#altaPrestaciones)
-    * [9.3 Modificar o eliminar una prestación](#modificarEliminarPrestacion)
+    * [9.3 Modificar o eliminar una prestación](#modificarEliminarEspecialidad)
 
 
+<a name="entidades"/>
 
-
-<a id="entidades"/>
 ## 1. Descripción de entidades del sistema
 
 ●	Profesional: son los médicos, enfermeras o cualquier persona que brinde un servicio para el cual se necesite asignar un turno
@@ -76,7 +74,8 @@ Cada prestación puede tener una duración distinta, siguiendo el ejemplo mencio
 
 
 
-<a id="cargaInicial"/>
+<a name="cargaInicial"/>
+
 ## 2. Carga inicial de datos
 
 Para que se puedan dar turnos, se deben cargar previamente determinados datos en el siguiente orden:
@@ -91,7 +90,8 @@ Para que se puedan dar turnos, se deben cargar previamente determinados datos en
 
 
 
- <a id="usuarios"/>
+<a name="usuarios"/>
+
 ## 3. Usuarios y roles
 
 Los usuarios del sistema son creado por el administrador. Cada usuario tiene un rol que le da permisos para poder realizar distintas acciones. Por ejemplo, un usuario puede tener permisos para dar un nuevo turno, pero se puede dar el caso que no tenga permiso para dar de alta una nueva agenda
@@ -99,8 +99,9 @@ Los usuarios del sistema son creado por el administrador. Cada usuario tiene un 
 Para más información sobre usuarios y roles, por favor consulte con el administrador.
 
 
-<a id="cambioPass" />
-#### 3.1 Cambio de contraseña
+<a name="cambioPass" />
+
+### 3.1 Cambio de contraseña
 
 Para cambiar la contraseña se debe hacer click arriba a la derecha donde está el nombre del usuario y elegir la opción "Cambiar contraseña" tal como se ve en la siguiente imagen:
 
@@ -118,8 +119,9 @@ El sistema avisa que la contraseña ha sido modificada correctamente
 
 
 
-<a id="turnos" />
-<a id="nuevoTurno" />
+<a name="turnos" />
+<a name="nuevoTurno" />
+
 ## 4. Turnos
 
 
@@ -129,11 +131,11 @@ El sistema avisa que la contraseña ha sido modificada correctamente
 
 Hay tres pasos que deben seguirse para poder dar un turno:
 
-<a id="datosPacienteTurnos" />
+<a name="datosPacienteTurnos" />
 #### Paso 1: Ingresar los datos del paciente
 
 
-<a id="turnoPacienteNuevo" />
+<a name="turnoPacienteNuevo" />
 **a.	Paciente nuevo**
 
 Si se quiere dar un turno a un paciente que no existe en el sistema se debe ingresar obligatoriamente el nombre, apellido y número de teléfono.
@@ -158,7 +160,8 @@ Es importante que en el campo Número de Teléfono este cargado el número de ce
 
 Con respecto al campo email, se debe ingresar el email del paciente para que el sistema pueda enviar automáticamente el recordatorio del turno.
 
-<a id="buscarTurno" />
+<a name="buscarTurno" />
+
 #### Paso 2: Búsqueda de turnos disponibles
 
 Para poder buscar un turno disponible se debe ingresar los datos del turno en el siguiente orden:
@@ -194,7 +197,8 @@ Luego, al clickear el botón Confirmar se mostrará la información del nuevo tu
 
 
 
-<a id="sobreTurno" />
+<a name="sobreTurno" />
+
 ### 4.2 Dar un sobreturno
 
 
@@ -217,14 +221,16 @@ Al hacer click en Confirmar, se mostrará la información del sobreturno dado.
 ![](images/sobreturnoConfirmacion.png)
 
 
-<a id="recordatorios" />
+<a name="recordatorios" />
+
 ### 4.3 Recordatorios por mail y mensaje de texto
 
 El sistema envia automáticamente un recordatorio al paciente a su email y número de celular únicamente cuando estos datos están cargados.
 
 
 
-<a id="turnosDeProfesional" />
+<a name="turnosDeProfesional" />
+
 ### 4.4 Ver turnos de un profesional
 
 
@@ -239,7 +245,8 @@ Al clickear el botón de Turnos se verá lo siguiente:
 ![](images/verTurnosProfesional2.png)
 
 
-<a id="turnosDePaciente" />
+<a name="turnosDePaciente" />
+
 ### 4.5 Ver turnos de un paciente
 
 
@@ -257,13 +264,14 @@ Al clickear el botón de Turnos se verá el detalle del paciente y los turnos de
 
 ![](images/verTurnosPaciente2.png)
 
-<a id="cancelarTurno" />
+<a name="cancelarTurno" />
+
 ### 4.6 Cancelar un turno
 
 
 Haciendo click en el botón ![](images/botonCancelar.png), se puede cancelar un turno desde:
-* [3.3 Ver turnos de un profesional](#turnosDeProfesional)
-* [3.4 Ver turnos de un paciente](#turnosDePaciente)
+* [4.4 Ver turnos de un profesional](#turnosDeProfesional)
+* [4.5 Ver turnos de un paciente](#turnosDePaciente)
 
 
 ![](images/cancelarTurno1.png)
@@ -280,7 +288,8 @@ Al hacer click sobre el turno tomado, se puede ver el detalle del turno, y el bo
 
 
 
-<a id="informarCancelados" />
+<a name="informarCancelados" />
+
 ### 4.7 Informar turnos cancelados a pacientes
 
 Hay turnos que son cancelados **_por el sistema_**, esto ocurre únicamente:
@@ -289,7 +298,8 @@ a. Por ingreso de **nueva ausencia**
 
 Cuando el usuario ingresa una nueva ausencia del profesional, se cancelan los turnos tomados de este profesional para los días de la ausencia. Por ejemplo, si ya hay turnos tomados para el 1/10 para un profesional, y se le carga una ausencia para el 1/10, éstos serán cancelados automáticamente y se deberá **informar al paciente** lo ocurrido.
 
-<a id="turnosAInformarModificacionAgenda" />
+<a name="turnosAInformarModificacionAgenda" />
+
 b. Por **modificación en la agenda** de un profesional
 
 Cuando se modifica los días u horarios de atención de un profesional, los turnos tomados serán cancelados por el sistema. Por ejemplo, si hay un turno tomado para el miércoles 1/10 a las 10am; y se modifica la agenda de forma tal que el profesional deja de atender los miércoles 10am, este turno tomado pasa a cancelado automáticamente y se deberá **informar al paciente** de lo ocurrido.
@@ -330,7 +340,8 @@ _Nota: En la lista de turnos a informar, no se ven aquellos turnos que son cance
 
 
 
-<a id="marcarPresente" />
+<a name="marcarPresente" />
+
 ### 4.8 Marcar presente un turno
 
 Para marcar como presente un turno se debe ir a Agendas -> Calendario
@@ -351,10 +362,12 @@ En el calendario, se podrá distinguir el turno marcado como presente ya que est
 
 
 
-<a id="pacientes"></a>
+<a name="pacientes"></a>
+
 ## 5. Pacientes
 
-<a id="nuevoPaciente" />
+<a name="nuevoPaciente" />
+
 ### 5.1 Alta de paciente
 
 Para dar de alta un paciente se debe seleccionar la opción Nuevo Paciente del menú y luego en el formulario cargar los datos del paciente. Para que un paciente sea dado de alta, minimamente se deberan cargar los campos obligatorios: Nombre, Apellido paterno, Tipo de documento, Número de documento y Teléfono y clickear el botón verde de Confirmar.
@@ -362,7 +375,8 @@ Para dar de alta un paciente se debe seleccionar la opción Nuevo Paciente del m
 ![](images/nuevoPaciente1.png)
 
 
-<a id="modificarEliminarPaciente" />
+<a name="modificarEliminarPaciente" />
+
 ### 5.2 Modificar o eliminar paciente
 
 Para poder ver el detalle de un paciente, modicar o borrar la información del mismo, desde la pantalla Turnos, se debe buscar el paciente por algún criterio de busqueda tal como se hace cuando se busca un turno.
@@ -377,7 +391,8 @@ Luego de hacer click en Detalle/Modificar se va al mismo formulario que se ve al
 - cancelar un turno del paciente
 - eliminar el paciente
 
-<a id="agendas" />
+<a name="agendas" />
+
 ## 6. Agendas
 
 Un profesional puede tener una o varias agendas. Cada agenda representa los turnos disponibles que tiene un profesional para una especialidad/prestación especificando los días y horarios de atención.
@@ -385,7 +400,8 @@ Un profesional puede tener una o varias agendas. Cada agenda representa los turn
 
 ![](images/listadoAgendas.png)
 
-<a id="altaAgenda" />
+<a name="altaAgenda" />
+
 ### 6.1 Alta de agenda
 
 Para abrir una nueva agenda de un profesional se debe ir a Agendas -> Listado y clickear el botón Nueva Agenda
@@ -425,7 +441,8 @@ Para facilitar la renovación de agendas de profesionales, se puede utilizar la 
 
 Se podrá ver la agenda pre-cargada con los dias y horarios de la agenda que se selecciono renovar y se pueden realizar cambios para la renovación de la nueva agenda. Una vez realizados estos cambios, se debe hacer click en Confirmar tal como se realiza cuando se crea una nueva agenda.
 
-<a id="modificarEliminarAgenda" />
+<a name="modificarEliminarAgenda" />
+
 ### 6.2 Modificar o eliminar agenda
 
 
@@ -435,7 +452,7 @@ Para modificar una agenda, se deberá ir al listado, seleccionar la agenda a mod
 
 
 Únicamente se podrán modificar los días/horarios de atención del profesional. Hay que tener en cuenta que una vez modificada la agenda el sistema cancelará automáticamente los turnos que se vean afectados por el cambio. Esta situación deberá ser informada al paciente tal como se explica en [turnos a informar](#turnosAInformarModificacionAgenda)
-<a id="calendario" />
+<a name="calendario" />
 ### 6.3 Calendario
 
 
@@ -445,7 +462,8 @@ La vista Calendario se utiliza para poder ver los turnos de un profesional e imp
 
 ![](images/agendaCalendario.png)
 
-<a id="imprimirAgenda" />
+<a name="imprimirAgenda" />
+
 ### 6.4 Imprimir agenda de un profesional
 
 
@@ -456,13 +474,15 @@ Para imprimir la agenda de un médico se deberá hacer click en el botón derech
 
 
 
-<a id="profesionales" />
+<a name="profesionales" />
+
 ## 7. Profesionales
 
 
 Se debe ir a Admin -> Profesionales
 
-<a id="listadoProfesionales" />
+<a name="listadoProfesionales" />
+
 ### 7.1 Listado de profesionales
 
 Allí se mostrará el listado de profesionales, y se podrá:
@@ -483,19 +503,22 @@ Al clickear el botón de Detalle, se visualizan los datos personales del profesi
 
 El mismo formulario de detalle de profesional es utilizado por el alta, modificación o eliminación del profesional.
 
-<a id="altaProfesionales" />
+<a name="altaProfesionales" />
+
 ### 7.2 Alta de profesional
 
 Para dar de alta un profesional, se deberá hacer click en Nuevo Profesional, del listado de profesionales y llenar los campos con los datos personales del profesional junto con la especialidad y prestaciones que atienda. Los datos obligatorios a cargar son Nombre, Apellido paterno, Ficha municipal, Número de matricula, Especialidad y Prestaciones.
 
 ![](images/nuevoProfesional1.png)
 
-<a id="modificarEliminarProfesional" />
+<a name="modificarEliminarProfesional" />
+
 ### 7.3 Modificar o eliminar profesional
 
 Para modificar un profesional, se deberá seleccionar el profesional del listado y luego clickear el botón de Detalle para poder modificar datos del profesional, cambiar especialidad y/o prestación. También desde allí se puede Eliminar el profesional.
 
-<a id="turnosDeProfesional" />
+<a name="turnosDeProfesional" />
+
 ### 7.4 Ver turnos de un profesional
 
 Para poder ver los turnos de un profesioanles, se debe seleccionar el profesional del listado y seleccionar la opción Turnos.
@@ -505,8 +528,9 @@ Allí se muestran los turnos del día del profesional, como así también los tu
 
 Para cancelar el turno hacer click en el botón X
 
-<a id="ausencias" />
-<a id="listadoAusencias" />
+<a name="ausencias" />
+<a name="listadoAusencias" />
+
 ### 7.5 Ausencias
 
 #### 7.5.1 Ver ausencias de un profesional
@@ -520,7 +544,8 @@ Para ver el listado de ausencias de un profesional se deberá ir a Admin -> Prof
 
 
 
-<a id="nuevaAusencia" />
+<a name="nuevaAusencia" />
+
 #### 7.5.2 Cargar nueva ausencia de un profesional
 
 Clickeando el botón de Nueva Ausencia que se ve en el listado, se cargará el siguiente formulario:
@@ -530,7 +555,8 @@ Clickeando el botón de Nueva Ausencia que se ve en el listado, se cargará el s
 Se puede dar el caso, que la ausencia ingresada cancele turnos ya tomados. Para ver los turnos cancelados que deben informarse se deberá ir a [Turnos a informar](#informarCancelados)
 
 
-<a id="eliminarAusencia" />
+<a name="eliminarAusencia" />
+
 #### 7.5.3 Eliminar ausencia de un profesional
 
 En caso de necesitar borrar la ausencia de un profesional, se debe clickear la X de la ausencia a borrar, y confirma la eliminación de la misma.
@@ -540,11 +566,13 @@ En caso de necesitar borrar la ausencia de un profesional, se debe clickear la X
 
 
 
-<a id="especialidades"></a>
+<a name="especialidades"></a>
+
 ## 8. Especialidades
 
 
-<a id="especialidades"></a>
+<a name="especialidades"></a>
+
 ### 8.1 Listado de especialidades
 Para ver las especialidades se debe ir a Admin -> Especialidades
 
@@ -556,7 +584,8 @@ Se muestra el listado de especialidades donde se puede:
 
 ![](images/listadoEspecialidades.png)
 
-<a id="altaEspecialidades" />
+<a name="altaEspecialidades" />
+
 ### 8.2 Alta de especialidades
 
 Al hacer click en el botón Nueva especialidad.
@@ -571,7 +600,8 @@ Se debe ingresar obligatoriamente el nombre de la especialidad. A su vez, se pue
 ![](images/nuevaEspecialidad2.png)
 
 
-<a id="campoDefault" />
+<a name="campoDefault" />
+
 El campo Default se utiliza para definir si la especialidad ingresada debe aparecer primera en los combos donde se muestre el listado de especialidades. Por ejemplo, si frecuentemente se utiliza la especialidad Infectología, se marca el checkbox y luego en la pantalla de Nuevo Turno, se verá esta especialidad primera en el combo, tal como se muestra a continuación:
 
 
@@ -580,7 +610,8 @@ El campo Default se utiliza para definir si la especialidad ingresada debe apare
 
 
 
-<a id="modificarEliminarEspecialidad" />
+<a name="modificarEliminarEspecialidad" />
+
 ### 8.3 Modificar o eliminar una especialidad
 
 Primero se debe seleccionar una especialidad del listado y luego hacer click en el botón Modificar
@@ -601,7 +632,8 @@ Para borrar la especialidad, hacer click en el botón Eliminar
 
 
 
-<a id="prestaciones" />
+<a name="prestaciones" />
+
 ## 9. Prestaciones
 
 ### 9.1 Listado de prestaciones
@@ -616,7 +648,8 @@ Se muestra el listado de prestaciones donde se puede:
 
 ![](images/listadoPrestaciones.png)
 
-<a id="altaPrestaciones" />
+<a name="altaPrestaciones" />
+
 ### 9.2 Alta de prestaciones
 
 
@@ -640,7 +673,3 @@ En el campo Notas se debe ingresar información propia de la prestación, por ej
 En la pantalla nuevo turno, se puede ver el campo Notas, como Observaciones:
 
 ![](images/turnosObservaciones.png)
-
-
-
-<a id="modificarEliminarEspecialidad" />
