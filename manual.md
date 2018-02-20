@@ -132,10 +132,12 @@ El sistema avisa que la contraseña ha sido modificada correctamente
 Hay tres pasos que deben seguirse para poder dar un turno:
 
 <a name="datosPacienteTurnos" />
+
 #### Paso 1: Ingresar los datos del paciente
 
 
 <a name="turnoPacienteNuevo" />
+
 **a.	Paciente nuevo**
 
 Si se quiere dar un turno a un paciente que no existe en el sistema se debe ingresar obligatoriamente el nombre, apellido y número de teléfono.
@@ -457,7 +459,7 @@ Para modificar una agenda, se deberá ir al listado, seleccionar la agenda a mod
 
 
 
-La vista Calendario se utiliza para poder ver los turnos de un profesional e imprimir su agenda. Primero se deben ingresar los filtros de nombre de profesional, especialidad y prestación y hacer click en el botón Buscar. Se deben ingresar los filtros para poder ver los turnos en el calendario, de lo contrario, no se mostrará ningún turno.
+La vista Calendario se utiliza para poder ver los turnos de un profesional e imprimir su agenda. Primero se deben ingresar los filtros. Se puede filtrar por nombre de profesional, por especialidad/prestacion o si no por los 3 filtros de profesional/especialidad/prestación.
 
 
 ![](images/agendaCalendario.png)
